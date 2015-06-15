@@ -37,8 +37,8 @@ html[xmlns] .slides {display: block;}
 /* FlexSlider Default Theme
 *********************************/
 .flexslider {margin: 0 0 0px; background: ; position: relative; -webkit-border-radius: 4px; -moz-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; ,0,0,.2); zoom: 1;}
-.flex-viewport {max-height:220px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; transition: all 1s ease;}
-.loading .flex-viewport {max-height: 300px;}
+.flex-viewport {max-height:250px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; transition: all 1s ease;}
+.loading .flex-viewport {max-height: 280px;}
 .flexslider .slides {zoom: 1;}
 .carousel li {margin-right: 5px}
 /* Direction Nav */
@@ -83,15 +83,17 @@ html[xmlns] .slides {display: block;}
 @media screen and (max-width: 1024px) {
 	.flex-control-nav {bottom:0px;}
 .flex-viewport {
-max-height: 200px;
+max-height: 310px;
 }
+.loading .flex-viewport {max-height: 330px;}
 }
 
 @media screen and (max-width: 768px) {
 	
 .flex-viewport {
-max-height: 200px;
+max-height: 310px;
 }
+.loading .flex-viewport {max-height: 330px;}
 .flex-control-nav {
 bottom: -30px;
 }
@@ -112,8 +114,9 @@ height: 12px;
 bottom: -25px;
 }
 .flex-viewport {
-max-height: 200px;
+max-height: 250px;
 }
+.loading .flex-viewport {max-height: 270px;}
 }
 @media screen and (max-width: 320px) {
 

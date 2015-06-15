@@ -7,7 +7,15 @@ if(isset($_POST['subscribe'])){
         $insqry="INSERT INTO `subscribe`(`id`, `email`, `name`, `date_time`) VALUES ('','$email','$name',now())";
 		$var=mysql_query($insqry);
 		if($var>0){
-				echo"<script>alert('registered sucessfully ')</script>";
+				$to = $email;
+			$subject = "Thank You";
+			$body = " hi $name Thank you for  subscribing jet set career. \n\nif you need any urgent information you can call +918861193750 we will happy to help you
+			\n\n please don't reply to this mail this auto generated mail ";
+			$additionalheaders = "From: <".SITEEMAIL.">\r\n";
+			$additionalheaders .= "Reply-To: ".SITEEMAIL."";
+			mail($to, $subject, $body, $additionalheaders);
+			echo"<script>alert('registered sucessfully ')</script>";
+			
 			}
 		    else{
 				echo"<script>alert('please try again ')</script>";
@@ -171,7 +179,7 @@ mysql_close($conn);
       		<ul>
   	    		<li>
               <div class="slide-body" data-group="slide">
-                <img src="blog/images/ns5.JPG">
+                <img src="blog/images/ns5.JPG" >
                 <div class="caption header hidden-xs hidden-sm" data-animate="slideAppearUpToDown" data-delay="800" data-length="800" style="cursor:pointer;">
                   <a href="http://jetsetcareer.com/training.php#career" style=" padding: 10px;text-align: left; font-size:20px; text-transform: uppercase; color:  #FFFFFF; background:#e74c3c!important;">More Information on JetSet Careers</a>
 				  
@@ -186,7 +194,7 @@ mysql_close($conn);
   	    		</li>
   	    		<li>
               <div class="slide-body" data-group="slide">
-                <img src="blog/images/ns3.JPG">
+                <img src="blog/images/ns3.JPG" >
                 <div class="caption header hidden-xs hidden-sm" data-animate="slideAppearUpToDown" data-delay="800" data-length="800" style="cursor:pointer;">
                   <a href="http://jetsetcareer.com/training.php#career" style=" padding: 10px;text-align: left; font-size:20px; text-transform: uppercase; color:  #FFFFFF; background:#e74c3c!important;">More Information on JetSet Careers</a>
 				  
@@ -201,7 +209,7 @@ mysql_close($conn);
   	    		</li>
   	    		<li>
               <div class="slide-body" data-group="slide">
-                <img src="blog/images/ns4.JPG">
+                <img src="blog/images/ns4.JPG" >
                 <div class="caption header hidden-xs hidden-sm" data-animate="slideAppearUpToDown" data-delay="800" data-length="800" style="cursor:pointer;">
                   <a href="http://jetsetcareer.com/training.php#career" style=" padding: 10px;text-align: left; font-size:20px; text-transform: uppercase; color:  #FFFFFF; background:#e74c3c!important;">More Information on JetSet Careers</a>
 				  
@@ -288,10 +296,10 @@ opacity:0.5;
 
 
 <!-- what -->
-<div class="clearfix">
+<div class="clearfix" style="">
 	<div class="what">
 		<div class="col-md-1"></div>
-		<div class="col-md-7" style="padding: 1em 0;">
+		<div class="col-md-7" style="padding: 1em 0; padding-right:15px;">
 			<section class="slider">
 						<div class="flexslider" >
 						<h6  class="hidden-xs" style=" background:#000000; margin:0px;color:#FFFFFF; padding-top:10px; text-align:left;">TESTIMONIALS</h6>
@@ -408,8 +416,8 @@ opacity:0.5;
 			
 			
 		</div>
-		<div class="col-md-3" style="background:#d3d3d3; padding:10px;">
-		<div  style="border-top:#D10C18 5px solid; background:#d3d3d3; padding:0px;">
+		<div class="col-md-4" style="background:#d3d3d3; padding:0px; padding-top:15px;">
+		<div  style="border-top:#D10C18 5px solid; background:#d3d3d3; padding:0px; ">
 			<p style="padding:15px;"><span  style="font-family:'Comic Sans MS',cursive;font-size:40px;color:rgb(46,46,46); ">Testimonials</span><p>
 			<p style="margin:3%; padding:1%; background:rgba(236,210,200,0.8);"><span style="font-family:'Comic Sans MS',cursive;font-size:18px;color:rgb(110,110,110);">Jet set career is a unique module which no one thought of exploring earlier in India. I'm very thankful to the complete team, especially Susmita for creating such a valuable module to help people around.</span><br><br>
 			<span  style="font-family:'Comic Sans MS',cursive;font-size:22px;color:rgb(46,46,46);">From Himanshu Jain</span></p>
@@ -434,7 +442,7 @@ opacity:0.5;
 	</div>
 	</div>
 	
-	<div class="col-md-1"></div>
+	
 </div>	
 </div>
 <!-- what -->
@@ -524,7 +532,15 @@ if(isset($_POST['submit'])){
         $insqry="INSERT INTO `message`(`ID`, `NAME`, `EMAIL`, `TEXT`, `DATE`) VALUES ('','$name','$email','$msg',now())";
 		$var=mysql_query($insqry);
 		if($var>0){
+				$to = $email;
+			$subject = "Thank You";
+			$body = " hi $name Thank you for  messaging jet set career.\n\nWe will be contacting you soon. \n\nif you need any urgent information you can call +918861193750 we will happy to help you
+			\n\n please don't reply to this mail this auto generated mail ";
+			$additionalheaders = "From: <".SITEEMAIL.">\r\n";
+			$additionalheaders .= "Reply-To: ".SITEEMAIL."";
+			mail($to, $subject, $body, $additionalheaders);
 				echo"<script>alert('We will get back to you soon ')</script>";
+				
 			}
 		    else{
 				echo"<script>alert('please try again ')</script>";

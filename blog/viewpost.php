@@ -4,10 +4,18 @@ $email=$_POST['email'];
 $name=$_POST['name'];
 if(isset($_POST['subscribe'])){
 
-        $insqry="INSERT INTO `subscribe`(`id`, `email`, `name`, `date_time`) VALUES ('','$email','$name',now())";
+       $insqry="INSERT INTO `subscribe`(`id`, `email`, `name`, `date_time`) VALUES ('','$email','$name',now())";
 		$var=mysql_query($insqry);
 		if($var>0){
-				echo"<script>alert('registered sucessfully ')</script>";
+				$to = $email;
+			$subject = "Thank You";
+			$body = " hi $name Thank you for  subscribing jet set career. \n\nif you need any urgent information you can call +918861193750 we will happy to help you
+			\n\n please don't reply to this mail this auto generated mail ";
+			$additionalheaders = "From: <".SITEEMAIL.">\r\n";
+			$additionalheaders .= "Reply-To: ".SITEEMAIL."";
+			mail($to, $subject, $body, $additionalheaders);
+			echo"<script>alert('registered sucessfully ')</script>";
+			
 			}
 		    else{
 				echo"<script>alert('please try again ')</script>";
@@ -280,6 +288,13 @@ if(isset($_POST['submit'])){
         $insqry="INSERT INTO `message`(`ID`, `NAME`, `EMAIL`, `TEXT`, `DATE`) VALUES ('','$name','$email','$msg',now())";
 		$var=mysql_query($insqry);
 		if($var>0){
+				$to = $email;
+			$subject = "Thank You";
+			$body = " hi $name Thank you for  messaging jet set career.\n\nWe will be contacting you soon. \n\nif you need any urgent information you can call +918861193750 we will happy to help you
+			\n\n please don't reply to this mail this auto generated mail ";
+			$additionalheaders = "From: <".SITEEMAIL.">\r\n";
+			$additionalheaders .= "Reply-To: ".SITEEMAIL."";
+			mail($to, $subject, $body, $additionalheaders);
 				echo"<script>alert('We will get back to you soon ')</script>";
 			}
 		    else{
