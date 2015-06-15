@@ -28,7 +28,7 @@
     position:relative;
     cursor:pointer;
 }
-.wrap p{
+.wrap a{
     position:absolute;
     top:50%;
 	left:2%;
@@ -57,7 +57,7 @@
     transition:opacity 0.26s ease-out;
     transition:500ms;
 }
-.wrap:hover p {
+.wrap:hover a {
     opacity :1;
 	position:absolute;
     top:50%;

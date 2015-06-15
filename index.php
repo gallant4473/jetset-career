@@ -267,19 +267,19 @@ opacity:0.5;
 			<div class="zoom_img">
 				<img src="blog/images/1.jpg" class="img-responsive" style="margin-top:-70px;">
 			</div>
-			<p style=" padding: 10px;text-align:center;  text-transform: uppercase;  position:relative;   top:-100px; ">More Information on JetSet Careers</p>
+			<a href="http://jetsetcareer.com/training.php#career" style="   padding: 10px; display:block;text-align:center;  text-transform: uppercase;  position:relative;   top:-100px; ">More Information on JetSet Careers</a>
 		</div>
 		<div class="col-md-2 don wrap">
 			<div class="zoom_img">
 				<img src="blog/images/2.jpg" class="img-responsive" style="margin-top:-70px;">
 			</div>
-			 <p style=" padding: 10px;text-align:center; text-transform: uppercase;  position:relative;   top:-100px;">More Information on Corporate Training</p>
+			 <a href="http://jetsetcareer.com/training.php#trainer" style=" display:block; padding: 10px;text-align:center; text-transform: uppercase;  position:relative;   top:-100px;">More Information on Corporate Training</a>
 		</div>
 		<div class="col-md-2 don wrap">
 			<div class="zoom_img">
 				<img src="blog/images/3.jpg" class="img-responsive" style="margin-top:-70px;">
 			</div>
-			<p style=" padding:10px; text-align: center; text-transform: uppercase;  position:relative;   top:-100px;">More information on Coaching and Consultancy</p> 
+			<a href="http://jetsetcareer.com/training.php#coach" style=" display:block; padding:10px; text-align: center; text-transform: uppercase;  position:relative;   top:-100px;">More information on Coaching and Consultancy</a> 
 		</div>
 	
 	<div class="col-md-3"></div>
